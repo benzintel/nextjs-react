@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { addAbout } from './../actions/AccountActions';
 
 
@@ -7,7 +7,7 @@ class AboutContainer extends React.Component {
 
 	constructor(props) {
 		super(props);
-		
+
 		this.state = {
 			loading: false
 		};
@@ -24,9 +24,9 @@ class AboutContainer extends React.Component {
 	render() {
 		return (
 			<div>
-				<button onClick={ this.changeProps.bind(this) }>Click</button>
+				<button onClick={this.changeProps.bind(this)}>Click</button>
 				{ /* Show data in store */}
-				{ this.props.about }
+				{this.props.about}
 			</div>
 		);
 	}

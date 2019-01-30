@@ -14,7 +14,6 @@ export default class MyDocument extends Document {
 		return (
 			<html>
 				<Head>
-					<title key="title">Benz</title>
 					<meta key="description" name="description" content=""/>
 					<meta key="og:url" property="og:url" content="" />
 					<meta key="og:type" property="og:type" content="website" />

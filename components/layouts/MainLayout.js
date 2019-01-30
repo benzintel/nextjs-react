@@ -1,7 +1,7 @@
 import React from 'react';
 import Router from 'next/router';
 import Head from 'next/head';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import $ from 'jquery';
 
@@ -14,7 +14,7 @@ class MainLayout extends React.Component {
 	}
 
 	componentDidMount() {
-		
+
 	}
 
 	componentWillUnmount() {
@@ -27,9 +27,10 @@ class MainLayout extends React.Component {
 		return (
 			<div>
 				<Head>
+					<title>Hi</title>
 					<style dangerouslySetInnerHTML={{ __html: stylesheet }} />
 				</Head>
-				{ children }
+				{children}
 			</div>
 		)
 	}

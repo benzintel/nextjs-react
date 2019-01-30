@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { addSometing } from './../actions/AccountActions';
 
 
@@ -7,7 +7,7 @@ class IndexContainer extends React.Component {
 
 	constructor(props) {
 		super(props);
-		
+
 		this.state = {
 			loading: false
 		};
@@ -33,7 +33,7 @@ class IndexContainer extends React.Component {
 			}
 		}).then(response => {
 			if (response.status == 200) {
-				
+
 			}
 		}, error => {
 			console.error(error);
@@ -43,9 +43,9 @@ class IndexContainer extends React.Component {
 	render() {
 		return (
 			<div>
-				<button onClick={ this.changeProps.bind(this) }>Click</button>
+				<button onClick={this.changeProps.bind(this)}>Click</button>
 				{ /* Show data in store */}
-				{ this.props.someting }
+				{this.props.someting}
 			</div>
 		);
 	}

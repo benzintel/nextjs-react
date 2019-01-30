@@ -3,7 +3,7 @@ import AccountReducer from './AccountReducer';
 
 
 const AppReducer = combineReducers({
-    AccountReducer,
+	AccountReducer,
 })
 
 
