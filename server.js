@@ -8,5 +8,5 @@ require('dotenv').config();
 
 // With express
 app.prepare().then(() => {
-  express().use(handler).listen(3000)
+  express().use(handler).listen(process.env.START_PORT)
 });
