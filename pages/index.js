@@ -3,7 +3,7 @@ import React from 'react';
 
 import MainLayout from './../components/layouts/MainLayout';
 import IndexContainer from './../containers/IndexContainer';
-import { initStore } from './../store';
+import { initStore, wrapper } from './../store';
 
 class Index extends React.Component {
 
@@ -16,4 +16,5 @@ class Index extends React.Component {
 	}
 }
 
-export default withRedux(initStore, null, null)(Index);
+// export default withRedux(initStore)(Index);
+export default wrapper.withRedux(Index);

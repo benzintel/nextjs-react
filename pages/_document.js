@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
 
 export default class MyDocument extends Document {
@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
 	
 	render () {
 		return (
-			<html>
+			<Html>
 				<Head>
 					<meta key="description" name="description" content=""/>
 					<meta key="og:url" property="og:url" content="" />
@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
 					<Main />
 					<NextScript />
 				</body>
-			</html>
+			</Html>
 		)
 	}
 }

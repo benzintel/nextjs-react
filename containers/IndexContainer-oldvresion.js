@@ -2,17 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addSometing, addAbout } from './../actions/AccountActions';
 
-import ReactFullpage from '@fullpage/react-fullpage';
-import MainButton from './../components/button/MainButton';
-
-
-const mystyle = {
-	color: "white",
-	backgroundColor: "DodgerBlue",
-	padding: "10px",
-	fontFamily: "Arial"
-};
-
 
 class IndexContainer extends React.Component {
 
@@ -60,38 +49,15 @@ class IndexContainer extends React.Component {
 
 	render() {
 		return (
-			<ReactFullpage
-				//fullpage options
-				licenseKey = {'XXXXXXXXX'}
-				scrollingSpeed = {1000} /* Options here */
-				autoScrolling = {true}
-				navigation = {true}
-				showActiveTooltip = {true}
-
-				render={({ state, fullpageApi }) => {
-				return (
-					<ReactFullpage.Wrapper>
-						<div className="section" style={mystyle}>
-							<p>Section 1 (welcome to fullpage.js) {this.props.someting}</p>
-							<MainButton primary onClick={() => fullpageApi.moveSectionDown()}>Click me to move down</MainButton>
-							<MainButton onClick={this.changeProps.bind(this)}>Change Store something</MainButton>
-						</div>
-						<div className="section">
-							<p>Section 2</p>
-						</div>
-						<div className="section">
-							<p>Section 3</p>
-						</div>
-						<div className="section">
-							<p>Section 4</p>
-						</div>
-						<div className="section">
-							<p>Section 5</p>
-						</div>
-					</ReactFullpage.Wrapper>
-				);
-				}}
-			/>
+			<div>
+				<button onClick={this.changeProps.bind(this)}>Click</button>
+				{ /* Show data in store */}
+				{this.props.someting}
+				<br/>
+				<button onClick={this.changePropsAbout.bind(this)}>Click</button>
+				{ /* Show data in store */}
+				{this.props.about}
+			</div>
 		);
 	}
 }
